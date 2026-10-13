@@ -259,3 +259,70 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Homepage tiger hero. Scoped so Privacy and Support retain their layout. */
+.home { background: var(--bg); }
+.home .nav,
+.home footer .shell { width: min(calc(100% - 40px), 1300px); }
+.home .hero {
+  width: min(calc(100% - 40px), 1300px);
+  min-height: 72vh;
+  padding: 30px 0 84px;
+}
+.home .hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(16px, 2vw, 32px);
+  width: 100%;
+}
+.home .hero-copy { min-width: 0; }
+.home .eyebrow {
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.home h1 {
+  font-size: clamp(52px, 6.55vw, 94px);
+  white-space: nowrap;
+}
+.home .cta-row { margin-top: 34px; }
+.home .hero-art-wrap {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.home .hero-art {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 900px) {
+  .home .nav,
+  .home footer .shell { width: min(calc(100% - 28px), 760px); }
+  .home .hero {
+    width: min(calc(100% - 28px), 760px);
+    padding: 4px 0 76px;
+    min-height: 0;
+  }
+  .home .hero-inner { grid-template-columns: 1fr; gap: 0; }
+  .home .hero-art-wrap {
+    order: -1;
+    justify-content: center;
+    margin: 0 -14px 10px;
+  }
+  .home .hero-art { width: min(100%, 670px); }
+  .home h1 { font-size: clamp(54px, 10vw, 82px); }
+}
+@media (max-width: 440px) {
+  .home .hero-art-wrap { margin: 0 -14px 2px; }
+  .home .eyebrow { margin-bottom: 14px; }
+  .home h1 { font-size: clamp(52px, 14vw, 62px); }
+  .home .cta-row { margin-top: 30px; }
+}
+@media (max-width: 350px) {
+  .home h1 { font-size: 45px; }
+  .home .button { padding: 0 16px; font-size: 14px; }
+}
