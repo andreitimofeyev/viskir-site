@@ -24,10 +24,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
                "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 85% 10%, rgba(255, 40, 60, 0.08), transparent 26rem),
-    var(--bg);
-  background-repeat: no-repeat;
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 
