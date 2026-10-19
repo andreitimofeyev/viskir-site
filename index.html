@@ -23,6 +23,37 @@ footer{min-height:110px;border-top:1px solid var(--line);position:relative;z-ind
 @media(max-width:500px){.scene{height:92vw;margin-top:24px}.art{width:161vw;right:-4vw;top:0}h1{font-size:clamp(48px,12.5vw,58px)}}
 @media(max-width:360px){h1{font-size:46px}.btn{padding:0 18px}.art{width:167vw}}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}}
+
+/* Responsive artwork bounds: retain the full approved tiger and phone. */
+@media (min-width: 841px) and (max-width: 1550px) {
+  .hero { min-height: max(744px, calc(58.224vw - 12px)); }
+  .art { top: -35px; }
+}
+@media (min-width: 1551px) and (max-width: 1699px) {
+  .hero { min-height: max(920px, calc(100svh - 205px)); }
+  .art { top: -35px; }
+}
+@media (min-width: 1700px) {
+  .hero { min-height: max(970px, min(1020px, calc(56.4vw + 10px)), calc(100svh - 205px)); }
+  .art { top: -35px; }
+}
+@media (max-width: 840px) {
+  .scene {
+    position: relative;
+    width: 100vw;
+    height: calc(86.72vw + 8px);
+    margin: 28px calc(50% - 50vw) 0;
+    overflow: hidden;
+  }
+  .art {
+    width: 140vw;
+    height: auto;
+    left: 50%;
+    right: auto;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
 </style>
 </head>
 <body>
